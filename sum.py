@@ -1,5 +1,5 @@
 // demo python file 
 
-a = 10
+a = 20
 b = 20
 print(a+b)
