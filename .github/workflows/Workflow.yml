@@ -44,5 +44,9 @@ jobs:
         run: git add .
       - name: Creating a commit
         run: git commit -m "added /build folder"
+      - name: Pushing to repo
+        run: git push origin testing
+      - name: Successful
+        run: echo "Pushed successfully"
     
   
