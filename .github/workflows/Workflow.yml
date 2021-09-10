@@ -31,3 +31,22 @@ jobs:
         run: pip list
       - name: Running setup.py
         run: python setup.py build
+      - name: Listing files/folders
+        run: ls -A
+      - name: Setting git config
+        run: |
+            git config --global user.email "suvradip2000@gmail.com"
+            git config --global user.name "Suvradippaul"
+      - name: Checking git status
+        run: |
+            git status
+      - name: Adding untracked files
+        run: git add .
+      - name: Creating a commit
+        run: git commit -m "added /build folder"
+      - name: Pushing to repo
+        run: git push origin testing
+      - name: Successful
+        run: echo "Pushed successfully"
+    
+  
