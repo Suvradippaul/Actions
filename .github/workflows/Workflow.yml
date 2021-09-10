@@ -36,6 +36,9 @@ jobs:
       - name: Checking git status
         run: |
             git status
-            git config user.name
-            git config user.email
+      - name: Adding untracked files
+        run: git add .
+      - name: Creating a commit
+        run: git commit -m "added /build folder"
+    
   
