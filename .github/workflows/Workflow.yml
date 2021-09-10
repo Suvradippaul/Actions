@@ -31,3 +31,11 @@ jobs:
         run: pip list
       - name: Running setup.py
         run: python setup.py build
+      - name: Listing files/folders
+        run: ls -A
+      - name: Checking git status
+        run: |
+            git status
+            git config user.name
+            git config user.email
+  
