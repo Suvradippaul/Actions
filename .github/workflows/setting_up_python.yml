@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: Windows
 
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
             pip install pygame==2.0.1
             pip install cx_Freeze==6.8
             pip install -r requirements.txt
-      - name: Running setup.py
-        run: python setup.py build
       - name: Running pip list
         run: pip list
+      - name: Running setup.py
+        run: python setup.py build
