@@ -2,6 +2,9 @@ name: Python package
 
 on: [push]
 
+env:
+  API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+
 jobs:
   build:
 
@@ -28,9 +31,9 @@ jobs:
       - name: Running setup.py
         run: python setup.py build
       - name: Setting git config
-        run: |
-            git config --global user.email "suvradip2000@gmail.com"
-            git config --global user.name "Suvradippaul"
+#         run: |
+#             git config --global user.email "suvradip2000@gmail.com"
+#             git config --global user.name "Suvradippaul"
       - name: Checking git status
         run: git status
       - name: Pulling updated source
