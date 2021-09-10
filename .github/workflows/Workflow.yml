@@ -33,6 +33,8 @@ jobs:
             git config --global user.name "Suvradippaul"
       - name: Checking git status
         run: git status
+      - name: Pulling updated source
+        run: git pull origin main
       - name: Adding untracked files
         run: git add .
       - name: Creating a commit
