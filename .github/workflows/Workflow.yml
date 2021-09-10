@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -32,7 +32,7 @@ jobs:
       - name: Running setup.py
         run: python setup.py build
       - name: Listing files/folders
-        run: ls -A
+        run: dir
       - name: Setting git config
         run: |
             git config --global user.email "suvradip2000@gmail.com"
